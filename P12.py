@@ -16,7 +16,7 @@ def regmatch(source,pattern):
             elif pattern[j-1] == '*':
                 T[i][j] = T[i][j-2]
                 if pattern[j-2]=='.' or pattern[j-2] == source[i-1]:
-                    T[i][j] =  T[i-1][j]
+                    T[i][j] = T[i][j] or T[i - 1][j]
             else:
                 T[i][j] = False
 

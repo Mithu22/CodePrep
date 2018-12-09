@@ -3,6 +3,7 @@ def round(prices,target):
     floored = [math.floor(x) for x in prices]
     remaining = abs(target-sum(floored))
     ceils = sorted(enumerate(prices),key = lambda x:math.floor(x[1])+1-x[1])
+    print(ceils)
     for i in range(0,remaining):
         idx = ceils[i][0]
         floored[idx] = math.ceil(ceils[i][1])

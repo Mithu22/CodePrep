@@ -56,3 +56,9 @@ class Solution:
         ll += " " * lpd
         results.append(ll)
         return results
+
+
+words = ["This", "is", "an", "example", "of", "text", "justification."]
+maxWidth = 16
+sol  = Solution()
+print(sol.fullJustify(words,maxWidth))
